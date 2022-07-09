@@ -12,9 +12,8 @@ import FormControl from "@mui/material/FormControl";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Button from "@mui/material/Button";
+import Navbar from './Navbar';
 // import { Link } from "react-router-dom";
-
-
 const SignUp = () => {
   const history = useNavigate();
   const [cpassword, setCpassword] = useState("");
@@ -51,26 +50,15 @@ const SignUp = () => {
     if(user.password == cpassword){
       localStorage.setItem("useremail",user.email)
       localStorage.setItem("username",user.name)
-      history("/")
+      history("/user")
     }else{
       alert("password and confirm password are not same Please try again")
     }
-    // try {
-    //   // setLoading(true)
-    //   const  {data}  = await LoginAll(user);
-    //  // console.log(data);
-    //   localStorage.setItem(`${data.name}`, JSON.stringify(data));
-    //   history(`/${data.name}`);
-    //   //setLoading(false)
-    // } catch (error) {
-    //   //	setError(error.response.data.message);
-    //   //  setLoading(false)
-    //   console.log(error.response);
-    //   alert(error.response.data.message)
-    // }
   };
 
   return (
+    <>
+    <Navbar />
     <div className="container">
       <div className="container pl-5 main_container mt-5 py-5">
         <div className="row">
@@ -201,6 +189,8 @@ const SignUp = () => {
         </div>
       </div>
     </div>
+    </>
+  
   );
 };
 

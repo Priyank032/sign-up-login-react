@@ -3,7 +3,6 @@ import AccountMenu from "./AccountMenu";
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 import Dropdown from "./Dropdown"
-// import Search_bar_youtube_phn from "./Search_bar_youtube_phn";
 
 const MenuBars = styled(FaBars)`
     display:none;
@@ -42,14 +41,12 @@ const Navbar = () => {
             Login Registration System
             </h4>
           </div>
-          {/* <div className="col-md-3 pl-2 mt-1  d-none">
-            <Search_bar_youtube_phn />
-          </div> */}
           <div className="col-6 col-md-2 mt-1  d-flex justify-content-end">
             <div>
-              {
-                data ? <AccountMenu style={{fontSize:"100px"}} />: ""
-              }
+            {
+              data ?<AccountMenu style={{fontSize:"100px"}} />:""
+            }
+              
             </div>
             <div className="d-block d-md-none ml-5">
               <MenuBars onClick={toggle} />
@@ -58,8 +55,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* <div className="d-block d-md-none"> */}
-      {/* <h1>hello</h1> */}
+     
       <Dropdown isOpen={isOpen} toggle={toggle} />
       {/* </div> */}
     </>

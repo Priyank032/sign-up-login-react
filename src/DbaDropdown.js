@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import React from 'react'
+
 import styled from 'styled-components';
 import { Link } from 'react-router-dom'
-// import { menuData } from '../data/MenuData';
-// import { Button } from '../components/Button';
 import { FaTimes } from 'react-icons/fa';
 
 const DropdownContainer = styled.div`

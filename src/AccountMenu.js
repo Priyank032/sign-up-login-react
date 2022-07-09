@@ -24,7 +24,7 @@ export default function AccountMenu() {
   };
 
   const HandleLogout = (e) => {
-    // e.preventDefault();
+    //  e.preventDefault();
     localStorage.clear();
     history("/");
     //console.log("helopo");
@@ -134,7 +134,7 @@ export default function AccountMenu() {
               </button>
               <button
                 type="button"
-                onClick={(e) => HandleLogout()}
+                onClick={(e) => HandleLogout(e)}
                 data-dismiss="modal"
                 className="btn btn-primary"
               >

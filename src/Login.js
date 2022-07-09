@@ -13,6 +13,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import Navbar from './Navbar';
 const Login = () => {
   const history = useNavigate();
   const initialValue = {
@@ -47,13 +48,15 @@ const Login = () => {
     if (user.email == "agrawalpriyank68@gmail.com" && user.password == "12345678") {
       localStorage.setItem("useremail", user.email);
       localStorage.setItem("username", "Priyank Agrawal");
-      history("/");
+      history("/user");
     } else {
       alert("Email Id pr password is wronf Please try agian");
     }
   };
 
   return (
+    <>
+    <Navbar />
     <div className="container">
       <div className="container pl-5 main_container mt-5 py-5">
         <div className="row">
@@ -133,6 +136,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
